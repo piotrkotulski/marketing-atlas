@@ -13,7 +13,7 @@
       "author": {
         "name": "Piotr Kotulski"
       },
-      "source": ".",
+      "source": "./plugins/marketing-atlas",
       "category": "productivity"
     }
   ]
