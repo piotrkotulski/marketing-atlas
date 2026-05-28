@@ -1,0 +1,44 @@
+{
+  "skill_name": "analytics-stack",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "set up GA4",
+      "skonfiguruj GA4",
+      "tracking plan",
+      "plan śledzenia",
+      "attribution model",
+      "model atrybucji",
+      "Consent Mode v2",
+      "analytics audit",
+      "audyt analityki",
+      "build a dashboard",
+      "zbuduj dashboard",
+      "e-commerce tracking",
+      "śledzenie e-commerce"
+    ],
+    "should_not_trigger": [
+      "write a blog post",
+      "design a banner"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Build a measurement plan for our Polish e-commerce on Magento. We use GA4.",
+        "assertions": [
+          "Builds a measurement plan with goal/metric/event/owner/threshold",
+          "Lists e-commerce events (view_item, add_to_cart, begin_checkout, purchase)",
+          "Includes payment_method + shipping_method as parameters (BLIK, InPost relevance)",
+          "Recommends Consent Mode v2 setup",
+          "Notes Piwik PRO as PL privacy-first alternative",
+          "Compliance: GDPR/RODO, AI Act art. 50 for personalization disclosure"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "skill_name": "content-engine",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "build a content strategy",
+      "stwórz strategię contentową",
+      "topic clusters for SEO",
+      "klastry tematyczne pod SEO",
+      "editorial calendar",
+      "kalendarz publikacji",
+      "what topics should I write about",
+      "o czym pisać na blogu",
+      "newsletter strategy",
+      "strategia newslettera"
+    ],
+    "should_not_trigger": [
+      "write one tweet",
+      "fix our checkout"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Zaprojektuj content strategy dla mojego SaaS dla brokerów hipotecznych w Polsce.",
+        "assertions": [
+          "Proposes 3-5 content pillars",
+          "Maps pillars to audience jobs-to-be-done",
+          "Suggests topic clusters for SEO",
+          "Defines realistic cadence based on team size",
+          "Includes distribution plan, not just production",
+          "Notes Polish-market specifics (PL keywords, compliance for financial services)"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Run structural validation
+        run: bash ./validate.sh
+
+      - name: Verify every SKILL.md parses
+        run: |
+          python3 - << 'PY'
+          import yaml, sys
+          from pathlib import Path
+          errors = 0
+          for skill_md in Path('skills').glob('*/SKILL.md'):
+              content = skill_md.read_text()
+              if not content.startswith('---'):
+                  print(f"::error file={skill_md}::missing frontmatter")
+                  errors += 1
+                  continue
+              end = content.find('---', 3)
+              try:
+                  fm = yaml.safe_load(content[3:end])
+                  assert 'name' in fm, 'no name'
+                  assert 'description' in fm, 'no description'
+                  assert fm['name'] == skill_md.parent.name, f"name mismatch: {fm['name']} vs {skill_md.parent.name}"
+              except Exception as e:
+                  print(f"::error file={skill_md}::{e}")
+                  errors += 1
+          if errors:
+              sys.exit(1)
+          print("All SKILL.md files parsed OK")
+          PY
+
+      - name: Verify evals JSON
+        run: |
+          python3 - << 'PY'
+          import json, sys
+          from pathlib import Path
+          errors = 0
+          for evals_json in Path('skills').glob('*/evals/evals.json'):
+              try:
+                  data = json.loads(evals_json.read_text())
+                  assert 'skill_name' in data
+                  assert 'trigger_evals' in data
+                  assert 'should_trigger' in data['trigger_evals']
+                  assert len(data['trigger_evals']['should_trigger']) >= 3
+              except Exception as e:
+                  print(f"::error file={evals_json}::{e}")
+                  errors += 1
+          if errors:
+              sys.exit(1)
+          print("All evals.json files valid")
+          PY
+
+      - name: Coverage stats
+        run: python3 tools/coverage-stats.py
+
+      - name: Check README badges in sync
+        run: |
+          python3 tools/coverage-stats.py --update-readme
+          if [[ -n "$(git diff README.md)" ]]; then
+            echo "::error::README badges out of date. Run 'python3 tools/coverage-stats.py --update-readme' locally and commit."
+            git diff README.md
+            exit 1
+          fi
+          echo "README badges in sync."
+
+  behavior-evals:
+    runs-on: ubuntu-latest
+    # Only run if ANTHROPIC_API_KEY secret is configured AND on push to main or manual dispatch
+    # (skipped on PRs from forks where secrets aren't available)
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install -r requirements-dev.txt
+
+      - name: Check secret
+        id: secret_check
+        run: |
+          if [[ -n "${{ secrets.ANTHROPIC_API_KEY }}" ]]; then
+            echo "has_key=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_key=false" >> $GITHUB_OUTPUT
+            echo "::warning::ANTHROPIC_API_KEY not set, skipping behavior evals"
+          fi
+
+      - name: Run behavior evals
+        if: steps.secret_check.outputs.has_key == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 tools/run-behavior-evals.py --all --quiet --out eval-results.json
+
+      - name: Upload eval results
+        if: steps.secret_check.outputs.has_key == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: behavior-eval-results
+          path: eval-results.json
+          retention-days: 30

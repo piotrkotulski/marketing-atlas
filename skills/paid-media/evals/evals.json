@@ -1,0 +1,43 @@
+{
+  "skill_name": "paid-media",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "Google Ads strategy",
+      "strategia Google Ads",
+      "Meta Ads campaign structure",
+      "struktura kont Meta Ads",
+      "scale our paid ads",
+      "skalowanie reklam",
+      "LinkedIn Ads for B2B",
+      "LinkedIn Ads dla B2B",
+      "Allegro Ads strategy",
+      "strategia Allegro Ads",
+      "PPC budget allocation",
+      "alokacja budżetu PPC"
+    ],
+    "should_not_trigger": [
+      "write me a blog post",
+      "set up a referral program"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Plan paid media strategy for our Polish e-commerce. Budget 30k PLN/mo. Goal: scale revenue.",
+        "assertions": [
+          "Recommends Allegro Ads + Ceneo Ads as foundation for PL e-commerce",
+          "Includes Google + Meta + retargeting mix",
+          "Recommends budget split (70/20/10 or similar) with rationale",
+          "Defines ROAS target or framework to set one",
+          "Notes compliance: Omnibus, Consent Mode v2, DSA",
+          "Mentions Polish payment/delivery in landing page advice (BLIK, InPost)"
+        ]
+      }
+    ]
+  }
+}

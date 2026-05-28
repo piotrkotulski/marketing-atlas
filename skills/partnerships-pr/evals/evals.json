@@ -1,0 +1,40 @@
+{
+  "skill_name": "partnerships-pr",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "co-marketing partnerships",
+      "partnerstwa co-marketingowe",
+      "affiliate program design",
+      "program afiliacyjny",
+      "PR strategy",
+      "strategia PR",
+      "influencer collaboration",
+      "współpraca z influencerem",
+      "build a community",
+      "buduj community"
+    ],
+    "should_not_trigger": [
+      "set up A/B test",
+      "write product copy"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Design an affiliate program for our B2B SaaS.",
+        "assertions": [
+          "Recommends commission structure with rationale",
+          "Defines tracking mechanism (UTM + dedicated link)",
+          "Notes disclosure requirements (FTC, UOKiK)",
+          "Recommends rewarding both sides if also building referrals",
+          "Includes compliance: GDPR for partner data, joint controllership"
+        ]
+      }
+    ]
+  }
+}

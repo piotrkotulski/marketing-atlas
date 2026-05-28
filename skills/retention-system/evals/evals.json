@@ -1,0 +1,43 @@
+{
+  "skill_name": "retention-system",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "reduce churn",
+      "zmniejsz churn",
+      "win-back inactive customers",
+      "win-back nieaktywnych klientów",
+      "loyalty program design",
+      "program lojalnościowy",
+      "referral program",
+      "program poleceń",
+      "customer lifecycle strategy",
+      "strategia lifecycle klienta",
+      "increase LTV",
+      "zwiększ LTV"
+    ],
+    "should_not_trigger": [
+      "set up Google Ads",
+      "write a tweet"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Mam SaaS B2B, churn 6% miesięcznie. Co zrobić?",
+        "assertions": [
+          "Diagnoses voluntary vs involuntary vs silent churn",
+          "Asks about activation and onboarding",
+          "Recommends cancellation flow that is compliant (dyr. 2023/2673)",
+          "Suggests dunning for involuntary churn",
+          "Mentions LTV/CAC math",
+          "Compliance: no dark patterns in cancellation"
+        ]
+      }
+    ]
+  }
+}

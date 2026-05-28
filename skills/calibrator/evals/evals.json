@@ -1,0 +1,51 @@
+{
+  "skill_name": "calibrator",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "calibrate Marketing Atlas for my business",
+      "skalibruj Marketing Atlas pod moją firmę",
+      "set up my marketing context",
+      "ustaw kontekst marketingowy",
+      "recalibrate, my business changed",
+      "skalibruj na nowo, zmienił się model biznesowy",
+      "I'm new to Marketing Atlas, how do I start?"
+    ],
+    "should_not_trigger": [
+      "write me a landing page",
+      "what's the weather today",
+      "explain Magento 2.4.9 release notes"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Skalibruj Marketing Atlas pod mój biznes — sprzedaję kursy online dla project managerów w Polsce.",
+        "assertions": [
+          "Asks questions in batches of 2-3, not all at once",
+          "Matches user's language (Polish)",
+          "Asks about business model, stage, and audience",
+          "Asks about Polish market regulations (since market = Poland)",
+          "Does not invent answers the user did not give",
+          "Confirms before writing files",
+          "Mentions that other Atlas skills will read this context"
+        ]
+      },
+      {
+        "id": 2,
+        "prompt": "Calibrate Marketing Atlas. We're a B2B SaaS, US market, 5-person team, post-Series A, focus on lead generation.",
+        "assertions": [
+          "Reads the user's pre-given context and does not re-ask answered questions",
+          "Asks only for missing fields (audience details, voice, channels, compliance)",
+          "Does not enable Polish market layer (US market)",
+          "Writes marketing-context.md with all known fields filled",
+          "Marks unknown fields as [not provided] rather than guessing"
+        ]
+      }
+    ]
+  }
+}

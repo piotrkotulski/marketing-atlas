@@ -1,0 +1,71 @@
+name: New skill proposal
+description: Propose a new skill to add to Marketing Atlas
+title: "[skill] "
+labels: ["new-skill", "proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Marketing Atlas keeps the skill count intentionally small. Each new skill must justify itself against the existing 17. Please be specific.
+
+  - type: input
+    id: name
+    attributes:
+      label: Proposed skill name
+      description: lowercase, hyphenated (e.g., "loyalty-programs"). Must not duplicate an existing skill.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem this skill solves
+      description: What marketing work is hard or impossible with the current 17 skills?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and boundaries
+      description: What does it do? What does it explicitly not do? How does it differ from the closest existing skill?
+    validations:
+      required: true
+
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Example triggers
+      description: At least 5 EN + 3 PL natural-language phrases that should activate it.
+      placeholder: |
+        - "loyalty program design"
+        - "tier-based rewards"
+        - "program lojalnościowy"
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: frameworks
+    attributes:
+      label: Frameworks or methods it would include
+      description: Bullet list of the core ideas it would teach.
+
+  - type: textarea
+    id: compliance
+    attributes:
+      label: Compliance angles
+      description: Any GDPR, UOKiK, AI Act, EAA, or sector-specific rules relevant?
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Best-fit category
+      options:
+        - foundation
+        - discover
+        - create
+        - distribute
+        - optimize
+    validations:
+      required: true

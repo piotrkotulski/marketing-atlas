@@ -1,0 +1,51 @@
+name: Skill improvement
+description: Suggest an improvement to an existing skill (better description, more triggers, new framework, etc.)
+title: "[improve] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which skill?
+      options:
+        - calibrator
+        - audience-discovery
+        - market-intel
+        - brand-positioning
+        - copy-craft
+        - content-engine
+        - visual-design
+        - video-script
+        - organic-search
+        - paid-media
+        - social-presence
+        - email-flows
+        - partnerships-pr
+        - conversion-optimization
+        - analytics-stack
+        - retention-system
+        - growth-experiments
+    validations:
+      required: true
+
+  - type: textarea
+    id: gap
+    attributes:
+      label: What's missing or weak
+      description: Be specific. "Could be better" is not actionable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: change
+    attributes:
+      label: Concrete change you'd make
+      description: Wording, framework to add, trigger phrases to add, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence (optional but appreciated)
+      description: Examples of prompts where the current skill underperforms.

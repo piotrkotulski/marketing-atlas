@@ -1,0 +1,38 @@
+{
+  "skill_name": "market-intel",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "analyze my competitors",
+      "analiza konkurencji",
+      "competitive positioning map",
+      "mapa pozycjonowania",
+      "pricing benchmark vs competitors",
+      "benchmark cenowy",
+      "what is our competitive advantage",
+      "co nas wyróżnia na tle konkurencji"
+    ],
+    "should_not_trigger": [
+      "write me a blog post",
+      "schedule a meeting"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Compare us to 3 competitors in the project management SaaS space: Asana, Monday, ClickUp.",
+        "assertions": [
+          "Classifies competitors as direct/indirect/substitute",
+          "Includes pricing benchmark",
+          "Produces a positioning map with 2 meaningful axes",
+          "Notes likely reasons customers choose each competitor",
+          "Identifies white space if any exists"
+        ]
+      }
+    ]
+  }
+}

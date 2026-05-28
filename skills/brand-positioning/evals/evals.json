@@ -1,0 +1,38 @@
+{
+  "skill_name": "brand-positioning",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "what is our positioning",
+      "jaka jest nasza pozycja",
+      "sharpen our value proposition",
+      "doprecyzuj propozycję wartości",
+      "messaging hierarchy",
+      "hierarchia komunikacji",
+      "what makes us different",
+      "jak się różnimy"
+    ],
+    "should_not_trigger": [
+      "design a logo",
+      "set up Google Analytics"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Help me position my new product: an AI-powered code review tool for small dev teams (5-20 people).",
+        "assertions": [
+          "Reads marketing-context.md if it exists",
+          "Produces a 4-line positioning statement",
+          "Identifies differentiators that pass the 3 tests (important/distinct/provable)",
+          "Provides a messaging hierarchy (one-liner / pitch / story)",
+          "Asks for proof points if missing"
+        ]
+      }
+    ]
+  }
+}

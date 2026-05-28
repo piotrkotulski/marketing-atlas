@@ -1,0 +1,38 @@
+{
+  "skill_name": "visual-design",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "design a banner",
+      "zaprojektuj baner",
+      "creative brief for our ad",
+      "brief kreatywny do reklamy",
+      "generate an image for our post",
+      "wygeneruj obrazek do posta",
+      "product photo brief",
+      "brief zdjęć produktowych"
+    ],
+    "should_not_trigger": [
+      "write me an article",
+      "set up A/B test"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Brief a banner ad for Meta promoting our new running shoes for marathon runners.",
+        "assertions": [
+          "Defines purpose, audience, and ONE message",
+          "Specifies tone words (max 3)",
+          "Lists format/dimensions per channel",
+          "Notes accessibility requirements (alt text, contrast)",
+          "Notes AI Act labeling if AI image generation involved"
+        ]
+      }
+    ]
+  }
+}

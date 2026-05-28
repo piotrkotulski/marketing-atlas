@@ -1,0 +1,43 @@
+{
+  "skill_name": "social-presence",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "LinkedIn content strategy",
+      "strategia LinkedIn",
+      "what to post on Instagram",
+      "co publikować na Instagramie",
+      "build my personal brand",
+      "buduj mój personal brand",
+      "TikTok strategy",
+      "strategia TikTok",
+      "social media calendar",
+      "kalendarz social media",
+      "increase engagement on LinkedIn",
+      "zwiększ engagement na LinkedIn"
+    ],
+    "should_not_trigger": [
+      "set up Google Analytics",
+      "write a press release"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Zbuduj mi strategię personal brand na LinkedIn jako Project Manager e-commerce.",
+        "assertions": [
+          "Proposes 3-5 content pillars",
+          "Recommends realistic cadence (3-5×/week LinkedIn)",
+          "Provides hook patterns",
+          "Mentions engagement as content (not just publishing)",
+          "Personal brand vs company brand distinction",
+          "Compliance notes: AI labeling, disclosure"
+        ]
+      }
+    ]
+  }
+}

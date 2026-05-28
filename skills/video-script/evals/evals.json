@@ -1,0 +1,40 @@
+{
+  "skill_name": "video-script",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "video script for Instagram Reels",
+      "scenariusz wideo na Reels",
+      "TikTok video idea",
+      "pomysł na TikToka",
+      "YouTube video script",
+      "skrypt na YouTube",
+      "live shopping script",
+      "scenariusz live shopping",
+      "video hook for our ad",
+      "hook do reklamy wideo"
+    ],
+    "should_not_trigger": [
+      "write an article",
+      "analyze our funnel"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "30-second TikTok script for our productivity app. Hook fast, one tip, soft CTA.",
+        "assertions": [
+          "Includes timestamp structure (0-3s hook, mid, CTA)",
+          "Includes visual hook + verbal hook + text overlay at second 0",
+          "Specifies captions/subtitles",
+          "Has one CTA, not multiple",
+          "Notes accessibility (captions) and AI Act labeling if AI used"
+        ]
+      }
+    ]
+  }
+}

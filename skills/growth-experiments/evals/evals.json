@@ -1,0 +1,42 @@
+{
+  "skill_name": "growth-experiments",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "growth experiment program",
+      "program eksperymentów growth",
+      "prioritize tests with ICE",
+      "priorytetyzacja testów ICE",
+      "RICE scoring framework",
+      "ramówka RICE",
+      "launch plan",
+      "plan launchu",
+      "experiment design hypothesis",
+      "design experiment hypothesis",
+      "go-to-market plan",
+      "plan go-to-market"
+    ],
+    "should_not_trigger": [
+      "write product description",
+      "design an ad"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Help me prioritize 10 marketing experiment ideas using ICE.",
+        "assertions": [
+          "Explains ICE method (Impact, Confidence, Ease)",
+          "Asks for context to score (or scores with stated assumptions)",
+          "Provides prioritized list with rationale",
+          "Notes the limits of ICE vs RICE",
+          "Recommends documenting hypotheses and outcomes"
+        ]
+      }
+    ]
+  }
+}

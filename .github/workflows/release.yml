@@ -1,0 +1,91 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Run validation
+        run: bash ./validate.sh
+
+      - name: Build .skill bundles
+        run: |
+          mkdir -p dist
+          for skill_dir in skills/*/; do
+            skill_name=$(basename "$skill_dir")
+            # Package each skill as a ZIP renamed to .skill
+            (cd skills && zip -qr "../dist/${skill_name}.skill" "${skill_name}")
+          done
+          ls -lh dist/
+
+      - name: Build coverage stats snapshot
+        run: |
+          python3 tools/coverage-stats.py --json > dist/coverage.json
+          cat dist/coverage.json
+
+      - name: Build master bundles
+        run: |
+          # All-in-one bundle for Claude.ai upload
+          (cd dist && zip -q marketing-atlas-all.zip *.skill ../README.md ../LICENSE ../TESTING.md ../CHANGELOG.md coverage.json)
+          # Source bundle for GitHub repo download
+          zip -qr dist/marketing-atlas-source.zip . -x 'dist/*' '.git/*' '.github/*' '*.pyc' '__pycache__/*'
+          ls -lh dist/
+
+      - name: Extract version from tag
+        id: version
+        run: |
+          TAG="${GITHUB_REF#refs/tags/}"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+          echo "version=${TAG#v}" >> $GITHUB_OUTPUT
+
+      - name: Extract release notes from CHANGELOG
+        id: notes
+        run: |
+          python3 - << 'PY' > release-notes.md
+          import re
+          from pathlib import Path
+          version = "${{ steps.version.outputs.version }}"
+          content = Path('CHANGELOG.md').read_text()
+          # Find the section for this version
+          pattern = rf'## \[{re.escape(version)}\].*?(?=\n## \[|\Z)'
+          m = re.search(pattern, content, re.DOTALL)
+          if m:
+              print(m.group(0).strip())
+          else:
+              print(f"Release {version}")
+              print()
+              print("See CHANGELOG.md for details.")
+          PY
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Marketing Atlas ${{ steps.version.outputs.tag }}
+          body_path: release-notes.md
+          files: |
+            dist/marketing-atlas-all.zip
+            dist/marketing-atlas-source.zip
+            dist/*.skill
+            dist/coverage.json
+          draft: false
+          prerelease: false

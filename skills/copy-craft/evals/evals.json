@@ -1,0 +1,52 @@
+{
+  "skill_name": "copy-craft",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "write me a landing page",
+      "napisz mi landing page",
+      "rewrite this headline",
+      "popraw ten nagłówek",
+      "write hero copy for our homepage",
+      "napisz hero na stronę główną",
+      "I need a better CTA",
+      "potrzebuję lepszego CTA",
+      "write product description",
+      "opis produktu"
+    ],
+    "should_not_trigger": [
+      "analyze our SEO",
+      "set up email automation"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Write a homepage hero for a SaaS that automates VAT compliance for Polish e-commerce shops.",
+        "assertions": [
+          "Reads marketing-context.md if it exists",
+          "Provides headline + subheadline + one primary CTA",
+          "Uses specific outcomes, not vague benefits",
+          "Provides 2-3 headline alternatives with rationale",
+          "CTA uses verb + what they get (not 'Submit')",
+          "Avoids corp-AI words (leverage, unlock, transformative)"
+        ]
+      },
+      {
+        "id": 2,
+        "prompt": "Przepisz: 'Innowacyjna platforma AI dla nowoczesnych firm'.",
+        "assertions": [
+          "Identifies jargon (innowacyjna, AI, nowoczesnych)",
+          "Identifies vagueness as the core problem",
+          "Provides 2-3 alternatives using headline formulas",
+          "Suggests adding specificity (numbers, target, outcome)",
+          "Responds in Polish (matching user)"
+        ]
+      }
+    ]
+  }
+}

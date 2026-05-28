@@ -1,0 +1,43 @@
+{
+  "skill_name": "email-flows",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "welcome email sequence",
+      "sekwencja powitalna",
+      "cart abandonment emails",
+      "porzucony koszyk emaile",
+      "lifecycle email strategy",
+      "strategia lifecycle email",
+      "win-back campaign",
+      "kampania win-back",
+      "newsletter strategy",
+      "strategia newslettera",
+      "email automation flow",
+      "flow automatyzacji email"
+    ],
+    "should_not_trigger": [
+      "audit our SEO",
+      "design our logo"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Zaprojektuj sekwencję porzuconego koszyka dla mojego sklepu Magento w PL.",
+        "assertions": [
+          "Provides 3-email sequence with timing (30 min / 4-24h / 48-72h)",
+          "Email 2 addresses top objections (shipping/returns/social proof)",
+          "Mentions Polish-market context (BLIK, InPost as conversion levers)",
+          "Recommends Polish tools (GetResponse, SALESmanago, edrone)",
+          "Compliance: GDPR/RODO, double opt-in, one-click unsubscribe",
+          "One CTA per email"
+        ]
+      }
+    ]
+  }
+}

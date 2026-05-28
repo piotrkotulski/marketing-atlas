@@ -1,0 +1,39 @@
+{
+  "skill_name": "audience-discovery",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "who is my customer really",
+      "kim jest mój klient",
+      "build personas for my product",
+      "zbuduj persony",
+      "analyze these customer reviews",
+      "przeanalizuj te recenzje klientów",
+      "voice of customer analysis",
+      "what jobs are customers hiring us to do"
+    ],
+    "should_not_trigger": [
+      "write me a tweet",
+      "set up GA4 tracking"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Mam 50 recenzji ze sklepu Allegro mojego produktu (suplement na sen). Wyciągnij z nich segmenty i język klienta.",
+        "assertions": [
+          "Reads marketing-context.md if it exists",
+          "Uses extraction mode (not discovery mode)",
+          "Identifies pains, gains, triggers, objections",
+          "Keeps direct quotes from reviews",
+          "Suggests behavioral segments, not just demographic",
+          "Notes Polish-market context (Allegro reviews)"
+        ]
+      }
+    ]
+  }
+}

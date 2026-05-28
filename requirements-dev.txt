@@ -1,0 +1,3 @@
+# Dependencies for running Marketing Atlas tools locally
+anthropic>=0.40.0
+pyyaml>=6.0

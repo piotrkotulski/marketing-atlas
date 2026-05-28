@@ -1,0 +1,81 @@
+name: Bug report
+description: Report a bug, broken skill, or incorrect output
+title: "[bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill in the details below so we can reproduce and fix it.
+
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which skill?
+      description: Pick the skill that is misbehaving (or "general" if it's not a single skill).
+      options:
+        - calibrator
+        - audience-discovery
+        - market-intel
+        - brand-positioning
+        - copy-craft
+        - content-engine
+        - visual-design
+        - video-script
+        - organic-search
+        - paid-media
+        - social-presence
+        - email-flows
+        - partnerships-pr
+        - conversion-optimization
+        - analytics-stack
+        - retention-system
+        - growth-experiments
+        - general
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt or trigger used
+      description: The exact message that you sent.
+      placeholder: "Napisz mi sekwencję porzuconego koszyka dla mojego sklepu..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: What did the skill do (or fail to do)?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: What should have happened instead?
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: Claude model
+      description: e.g. Claude Sonnet 4.6, Opus 4.7
+      placeholder: Sonnet 4.6
+
+  - type: input
+    id: surface
+    attributes:
+      label: Surface
+      description: claude.ai (web/mobile/desktop), API, Claude Code, other
+      placeholder: claude.ai mobile
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Marketing context (if relevant)
+      description: Paste the relevant parts of your .agents/marketing-context.md (redact anything sensitive).

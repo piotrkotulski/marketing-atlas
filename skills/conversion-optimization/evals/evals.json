@@ -1,0 +1,43 @@
+{
+  "skill_name": "conversion-optimization",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "improve our checkout conversion",
+      "popraw konwersję checkoutu",
+      "CRO audit",
+      "audyt CRO",
+      "why is this page not converting",
+      "dlaczego ta strona nie konwertuje",
+      "A/B test our landing page",
+      "test A/B landing page",
+      "reduce cart abandonment",
+      "zmniejsz porzucone koszyki",
+      "optimize signup form",
+      "popraw formularz rejestracji"
+    ],
+    "should_not_trigger": [
+      "write me an essay",
+      "build a content calendar"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Mój checkout w sklepie Magento konwertuje 1.2%. Co jest nie tak?",
+        "assertions": [
+          "Asks for diagnostic data (analytics, recordings, heatmaps)",
+          "Mentions BLIK + InPost as conversion essentials in PL",
+          "Recommends checkout best practices (guest, mobile-first, single column)",
+          "Notes EAA/WCAG 2.2 accessibility",
+          "Notes dyr. 2023/2673 (no dark patterns)",
+          "Recommends A/B testing approach with sample size discipline"
+        ]
+      }
+    ]
+  }
+}

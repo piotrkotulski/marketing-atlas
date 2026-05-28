@@ -1,0 +1,43 @@
+{
+  "skill_name": "organic-search",
+  "pack": "marketing-atlas",
+  "version": "1.0.0",
+  "trigger_evals": {
+    "description": "Queries that should trigger this skill. Used by the trigger eval runner.",
+    "should_trigger": [
+      "audit our SEO",
+      "audyt SEO",
+      "fix our technical SEO",
+      "popraw technical SEO",
+      "why no Google traffic",
+      "dlaczego nie ma ruchu z Google",
+      "AI search optimization",
+      "optymalizacja pod AI search",
+      "schema markup for our products",
+      "schema dla produktów",
+      "structured data",
+      "dane strukturalne"
+    ],
+    "should_not_trigger": [
+      "write me a poem",
+      "design our logo"
+    ]
+  },
+  "behavior_evals": {
+    "description": "Prompts that activate the skill, with assertions on the expected output.",
+    "evals": [
+      {
+        "id": 1,
+        "prompt": "Zrób audyt SEO mojego sklepu Magento 2.4.7 w PL. Trafiamy do googli.pl.",
+        "assertions": [
+          "Proposes audit in order: technical → on-page → content → off-page → ecom specifics",
+          "Mentions e-commerce Magento traps (faceted nav, duplicate products)",
+          "Mentions Polish-market context (google.pl, Allegro share-of-voice)",
+          "Recommends Senuto/Semstorm + Ahrefs/Semrush for PL",
+          "Notes EAA/WCAG 2.2 accessibility connection",
+          "Suggests AI Overviews/GEO optimization"
+        ]
+      }
+    ]
+  }
+}
