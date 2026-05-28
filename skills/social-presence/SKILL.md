@@ -1,10 +1,6 @@
 ---
 name: social-presence
 description: "Use to plan and produce social media content: LinkedIn, Twitter/X, Instagram, TikTok, Facebook, YouTube. Trigger on: 'social media strategy', 'what to post', 'LinkedIn content', 'TikTok strategy', 'Instagram plan', 'social calendar', 'personal brand', 'engagement', 'treści na social', 'co publikować', 'LinkedIn content', 'TikTok', 'kalendarz contentowy', 'personal brand', 'budowa zasięgu'. Use for organic social — paid social belongs to paid-media."
-metadata:
-  version: 1.0.0
-  category: distribute
-  pack: marketing-atlas
 ---
 
 # Social presence

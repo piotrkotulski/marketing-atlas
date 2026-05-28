@@ -1,10 +1,6 @@
 ---
 name: retention-system
 description: "Use for churn prevention, loyalty programs, win-back campaigns, referrals, customer lifecycle. Trigger on: 'reduce churn', 'retention', 'win-back', 'loyalty program', 'lifetime value', 'LTV', 'customer lifecycle', 'cancellation flow', 'save offer', 'referral program', 'churn', 'redukcja churn', 'retencja', 'lifetime value', 'win-back', 'program lojalnościowy', 'program poleceń', 'cancellation flow'. Use for any conversation about keeping customers and increasing their value over time."
-metadata:
-  version: 1.0.0
-  category: optimize
-  pack: marketing-atlas
 ---
 
 # Retention system

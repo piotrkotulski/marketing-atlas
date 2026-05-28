@@ -1,10 +1,6 @@
 ---
 name: visual-design
 description: "Use to brief, generate, or evaluate visual assets: ad creatives, product photos, social graphics, brand visuals. Trigger on: 'design a banner', 'creative brief', 'generate image', 'ad creative', 'product photo', 'social graphic', 'brand visuals', 'thumbnail', 'grafika', 'kreacja graficzna', 'baner', 'wygeneruj obrazek', 'kreacja reklamowa', 'zdjęcie produktowe', 'miniaturka'. Use whenever a visual is needed and a brief or AI prompt would help."
-metadata:
-  version: 1.0.0
-  category: create
-  pack: marketing-atlas
 ---
 
 # Visual design

@@ -1,10 +1,6 @@
 ---
 name: calibrator
 description: "Marketing Atlas meta-skill. Run once per project to build a marketing context file that every other Atlas skill reads. Trigger when user says: 'calibrate Marketing Atlas', 'set up my marketing context', 'skalibruj', 'skalibruj Marketing Atlas', 'ustaw kontekst marketingowy', 'configure marketing skills for my business', when user mentions Marketing Atlas for the first time, or when other Atlas skills report missing context. Also triggers on first uses of any Atlas skill if no calibration exists."
-metadata:
-  version: 1.0.0
-  category: foundation
-  pack: marketing-atlas
 ---
 
 # Calibrator (Marketing Atlas foundation)

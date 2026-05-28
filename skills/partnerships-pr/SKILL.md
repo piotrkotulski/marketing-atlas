@@ -1,10 +1,6 @@
 ---
 name: partnerships-pr
 description: "Use for co-marketing, partnerships, affiliate programs, PR, influencer collaborations, communities. Trigger on: 'co-marketing', 'partnership', 'affiliate program', 'PR strategy', 'influencer', 'collaboration', 'community building', 'cross-promotion', 'partnerstwo', 'co-marketing', 'program afiliacyjny', 'PR', 'influencer marketing', 'współpraca z marką', 'budowa community'. Use for any conversation about leveraging other audiences, communities, or media."
-metadata:
-  version: 1.0.0
-  category: distribute
-  pack: marketing-atlas
 ---
 
 # Partnerships and PR

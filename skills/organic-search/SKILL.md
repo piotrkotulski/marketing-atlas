@@ -1,10 +1,6 @@
 ---
 name: organic-search
 description: "Use for SEO audit, technical SEO, on-page optimization, AI search visibility, schema/structured data. Trigger on: 'SEO audit', 'fix our SEO', 'why no Google traffic', 'technical SEO', 'AI search', 'AI Overviews', 'schema', 'structured data', 'rich snippets', 'audyt SEO', 'pozycjonowanie', 'widoczność w Google', 'dane strukturalne', 'JSON-LD', 'SEO sklepu', 'AI SEO'. Use for any conversation about getting found organically in Google or AI search engines."
-metadata:
-  version: 1.0.0
-  category: distribute
-  pack: marketing-atlas
 ---
 
 # Organic search

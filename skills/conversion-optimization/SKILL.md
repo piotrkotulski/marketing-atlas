@@ -1,10 +1,6 @@
 ---
 name: conversion-optimization
 description: "Use to diagnose and improve conversion across landing pages, product pages, checkouts, signup flows, forms. Trigger on: 'CRO', 'improve conversion', 'page not converting', 'checkout optimization', 'cart abandonment', 'signup flow', 'reduce friction', 'A/B test', 'conversion audit', 'optymalizacja konwersji', 'CRO', 'niska konwersja', 'porzucony koszyk', 'popraw checkout', 'uprość formularz', 'test A/B'. Use whenever conversion math needs to improve at a specific point in the funnel."
-metadata:
-  version: 1.0.0
-  category: optimize
-  pack: marketing-atlas
 ---
 
 # Conversion optimization

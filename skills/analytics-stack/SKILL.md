@@ -1,10 +1,6 @@
 ---
 name: analytics-stack
 description: "Use to design or audit measurement: GA4, events, conversions, attribution, consent, dashboards, e-commerce tracking. Trigger on: 'GA4 setup', 'tracking', 'measurement plan', 'attribution', 'analytics audit', 'consent mode', 'dashboard', 'cookie consent', 'data layer', 'GA4', 'śledzenie konwersji', 'analityka', 'pomiar', 'atrybucja', 'cookie consent', 'dashboardy'. Use whenever measurement is being set up, audited, or revised."
-metadata:
-  version: 1.0.0
-  category: optimize
-  pack: marketing-atlas
 ---
 
 # Analytics stack

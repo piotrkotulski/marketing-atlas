@@ -1,10 +1,6 @@
 ---
 name: growth-experiments
 description: "Use to plan, prioritize, and run a marketing experiment program: hypothesis design, ICE/RICE scoring, experiment templates, launch plans. Trigger on: 'experiment program', 'growth experiments', 'how to prioritize tests', 'ICE scoring', 'RICE', 'growth hacking', 'launch plan', 'go-to-market', 'eksperymenty marketingowe', 'priorytetyzacja testów', 'plan launchu', 'go-to-market', 'growth experimentation'. Use for testing programs broader than a single A/B test (those belong to conversion-optimization)."
-metadata:
-  version: 1.0.0
-  category: optimize
-  pack: marketing-atlas
 ---
 
 # Growth experiments

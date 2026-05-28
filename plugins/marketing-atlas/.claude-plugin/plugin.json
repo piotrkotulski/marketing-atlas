@@ -1,10 +1,7 @@
 {
   "name": "marketing-atlas",
   "description": "17 AI skills for marketing work — audience discovery, brand positioning, content creation, distribution, optimization, and a calibrator meta-skill. Bilingual EN/PL with optional Polish-market regulatory layer.",
-  "version": "1.0.0",
   "author": {
     "name": "Piotr Kotulski"
-  },
-  "homepage": "https://github.com/piotrkotulski/marketing-atlas",
-  "license": "MIT"
+  }
 }

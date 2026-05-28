@@ -1,10 +1,6 @@
 ---
 name: email-flows
 description: "Use to design email sequences and campaigns: welcome series, cart abandonment, onboarding, lifecycle, win-back, newsletters, transactional. Trigger on: 'email sequence', 'welcome email', 'cart abandonment', 'newsletter strategy', 'lifecycle email', 'win-back', 'email automation', 'email marketing', 'sekwencja powitalna', 'porzucony koszyk', 'newsletter', 'email lifecycle', 'win-back', 'email automation', 'kampania mailowa'. Use for both content and automation logic of email; for SMS see this skill too (it handles short-form messaging principles)."
-metadata:
-  version: 1.0.0
-  category: distribute
-  pack: marketing-atlas
 ---
 
 # Email flows

@@ -1,10 +1,6 @@
 ---
 name: video-script
 description: "Use to write video scripts for short-form (Reels, TikTok, Shorts), YouTube videos, live shopping, ads. Trigger on: 'video script', 'video hook', 'reel script', 'YouTube script', 'short-form video', 'live shopping script', 'ad video', 'scenariusz wideo', 'pomysł na rolkę', 'scenariusz TikTok', 'YouTube skrypt', 'live shopping', 'hook do wideo'. Use whenever a video needs words on the page before the camera rolls."
-metadata:
-  version: 1.0.0
-  category: create
-  pack: marketing-atlas
 ---
 
 # Video script

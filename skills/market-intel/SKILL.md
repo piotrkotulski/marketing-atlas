@@ -1,10 +1,6 @@
 ---
 name: market-intel
 description: "Use to map competitors, position the brand against alternatives, and benchmark pricing. Trigger on: 'analyze competitors', 'competitive analysis', 'positioning map', 'pricing benchmark', 'how do we compare to', 'SWOT', 'analiza konkurencji', 'mapa pozycjonowania', 'benchmark cenowy', 'jak wypadamy na tle', 'co robi konkurencja', 'monitoring konkurencji'. Use whenever positioning, pricing, or differentiation decisions are on the table."
-metadata:
-  version: 1.0.0
-  category: discover
-  pack: marketing-atlas
 ---
 
 # Market intel

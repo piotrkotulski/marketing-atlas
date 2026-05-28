@@ -1,10 +1,6 @@
 ---
 name: audience-discovery
 description: "Use to understand who the customer really is — personas, jobs-to-be-done, voice-of-customer extraction from reviews, interviews, surveys, support tickets. Trigger on: 'who is my customer', 'build personas', 'jobs to be done', 'analyze reviews', 'voice of customer', 'customer interviews', 'kim jest mój klient', 'persony', 'analiza recenzji', 'badanie klientów', 'voice of customer', 'wywiady z klientami', 'co mówią klienci'. Use whenever decisions need to be grounded in real customer language and behavior, not assumptions."
-metadata:
-  version: 1.0.0
-  category: discover
-  pack: marketing-atlas
 ---
 
 # Audience discovery

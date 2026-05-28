@@ -1,10 +1,6 @@
 ---
 name: brand-positioning
 description: "Use to define or sharpen positioning, value proposition, messaging hierarchy, and what the brand stands for. Trigger on: 'positioning', 'value proposition', 'what makes us different', 'messaging', 'brand strategy', 'how to describe my product', 'pozycjonowanie', 'propozycja wartości', 'co nas wyróżnia', 'komunikacja marki', 'strategia marki', 'jak opisać produkt'. Use before writing any major copy or running any campaign — positioning is the input that every other skill needs."
-metadata:
-  version: 1.0.0
-  category: discover
-  pack: marketing-atlas
 ---
 
 # Brand positioning

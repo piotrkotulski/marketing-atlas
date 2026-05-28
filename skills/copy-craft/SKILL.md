@@ -1,10 +1,6 @@
 ---
 name: copy-craft
 description: "Use to write or improve marketing copy: headlines, landing pages, hero sections, product pages, CTAs, ads, taglines. Trigger on: 'write copy', 'write headline', 'write a landing page', 'rewrite this', 'better hook', 'tagline', 'CTA', 'product description', 'napisz tekst', 'nagłówek', 'landing page', 'popraw copy', 'hasło', 'opis produktu', 'tekst sprzedażowy'. Use whenever words on a page need to convert, not just inform."
-metadata:
-  version: 1.0.0
-  category: create
-  pack: marketing-atlas
 ---
 
 # Copy craft

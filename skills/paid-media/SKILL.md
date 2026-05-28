@@ -1,10 +1,6 @@
 ---
 name: paid-media
 description: "Use for paid acquisition strategy across platforms: Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, marketplace ads (Allegro, Amazon), programmatic. Trigger on: 'paid ads', 'Google Ads', 'Meta Ads', 'LinkedIn Ads', 'TikTok Ads', 'Allegro Ads', 'ad strategy', 'PPC', 'ROAS', 'scaling ads', 'campaign structure', 'reklama płatna', 'kampania reklamowa', 'Google Ads', 'Meta Ads', 'Allegro Ads', 'skalowanie reklam', 'struktura kont reklamowych'. Use for any paid acquisition question that is not specifically about creative (creative belongs to visual-design and copy-craft)."
-metadata:
-  version: 1.0.0
-  category: distribute
-  pack: marketing-atlas
 ---
 
 # Paid media

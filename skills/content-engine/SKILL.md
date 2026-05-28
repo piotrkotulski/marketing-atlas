@@ -1,10 +1,6 @@
 ---
 name: content-engine
 description: "Use to plan and produce ongoing content: topic strategy, content pillars, editorial calendar, blog posts, newsletters, repurposing. Trigger on: 'content strategy', 'what to write about', 'topic clusters', 'editorial calendar', 'blog plan', 'content pillars', 'newsletter strategy', 'repurpose content', 'strategia contentowa', 'o czym pisać', 'klastry tematyczne', 'kalendarz publikacji', 'plan bloga', 'pillary contentowe', 'repurposing'. Use for long-term content planning, not one-off pieces (those belong to copy-craft)."
-metadata:
-  version: 1.0.0
-  category: create
-  pack: marketing-atlas
 ---
 
 # Content engine
